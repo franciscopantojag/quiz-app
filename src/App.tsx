@@ -4,13 +4,10 @@ import { fetchQuizQuestions } from "./lib/api";
 import QuestionCard from "./components/QuizCard";
 //Types
 import { Difficulty, QuestionState } from "./lib/api";
+import { AnswerObject } from "./components/QuizCard";
+// Styles
+import { GlobalStyle, Wrapper } from "./App.styles";
 
-type AnswerObject = {
-  question: string;
-  answer: string;
-  correct: boolean;
-  correctAnswer: string;
-};
 const TOTAL_QUESTIONS = 10;
 
 const App: React.FC = () => {
@@ -29,6 +26,7 @@ const App: React.FC = () => {
       newQuestions = await fetchQuizQuestions(TOTAL_QUESTIONS, Difficulty.EASY);
     } catch (err) {
       console.log(err);
+      return;
     }
 
     setQuestions(() => newQuestions);
@@ -37,19 +35,47 @@ const App: React.FC = () => {
     setNumber(() => 0);
     setLoading(() => false);
   };
-  const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {};
-  const nextQuestion = () => {};
+  const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (!gameOver) {
+      const answer = e.currentTarget.value;
+      //check answer against correct answer
+      const correct = questions[number].correct_answer === answer;
+      if (correct) {
+        setScore((prev) => prev + 1);
+      }
+      // Save answer in array for user answers
+      const answerObject = {
+        question: questions[number].question,
+        answer,
+        correct,
+        correctAnswer: questions[number].correct_answer,
+      };
+      setUserAnswers((prev) => [...prev, answerObject]);
+    }
+  };
+  const nextQuestion = () => {
+    const nextQuestion = number + 1;
+    if (nextQuestion === TOTAL_QUESTIONS) {
+      setGameOver(() => true);
+    } else {
+      setNumber(() => nextQuestion);
+    }
+  };
   return (
-    <div className="App">
-      <div className="container">
+    <>
+      <GlobalStyle />
+      <Wrapper>
         <h1>React Quiz</h1>
         {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
-          <button className="start" onClick={startTrivia}>
-            Start
-          </button>
+          <>
+            <button className="start" onClick={startTrivia}>
+              Start
+            </button>
+          </>
         ) : null}
         {!gameOver ? <p className="score">Score: {score}</p> : null}
         {loading && <p>Loading Questions...</p>}
+
         {!loading && !gameOver && (
           <QuestionCard
             questionNr={number + 1}
@@ -64,12 +90,12 @@ const App: React.FC = () => {
         !loading &&
         userAnswers.length === number + 1 &&
         number !== TOTAL_QUESTIONS - 1 ? (
-          <div>
-            <button onClick={nextQuestion}>Next Question</button>
-          </div>
+          <button className="next" onClick={nextQuestion}>
+            Next Question
+          </button>
         ) : null}
-      </div>
-    </div>
+      </Wrapper>
+    </>
   );
 };
 
