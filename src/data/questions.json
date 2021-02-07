@@ -1,0 +1,97 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "category": "Sports",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which car manufacturer won the 2016 24 Hours of Le Mans?",
+      "correct_answer": "Porsche",
+      "incorrect_answers": ["Toyota", "Audi", "Ferrari"]
+    },
+    {
+      "category": "Sports",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the oldest team in the NFL?",
+      "correct_answer": "Arizona Cardinals",
+      "incorrect_answers": [
+        "Chicago Bears",
+        "Green Bay Packers",
+        "New York Giants"
+      ]
+    },
+    {
+      "category": "Sports",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which of the following Grand Slam tennis tournaments occurs LAST?",
+      "correct_answer": "US Open",
+      "incorrect_answers": ["French Open", "Wimbledon", "Australian Open"]
+    },
+    {
+      "category": "Sports",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What year was hockey legend Wayne Gretzky born?",
+      "correct_answer": "1961",
+      "incorrect_answers": ["1965", "1959", "1963"]
+    },
+    {
+      "category": "Sports",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which of the following pitchers was named National League Rookie of the Year for the 2013 season?",
+      "correct_answer": "Jose Fernandez",
+      "incorrect_answers": ["Jacob deGrom", "Shelby Miller", "Matt Harvey"]
+    },
+    {
+      "category": "Sports",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "How many French Open&#039;s did Bj&ouml;rn Borg win?",
+      "correct_answer": "6",
+      "incorrect_answers": ["4", "9", "2"]
+    },
+    {
+      "category": "Sports",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which Formula 1 driver switched teams in the middle of the 2017 season?",
+      "correct_answer": "Carlos Sainz Jr.",
+      "incorrect_answers": ["Daniil Kvyat", "Jolyon Palmer", "Rio Haryanto"]
+    },
+    {
+      "category": "Sports",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is Tiger Woods&#039; all-time best career golf-score?",
+      "correct_answer": "61",
+      "incorrect_answers": ["65", "63", "67"]
+    },
+    {
+      "category": "Sports",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Who won the 2011 Stanley Cup?",
+      "correct_answer": "Boston Bruins",
+      "incorrect_answers": [
+        "Montreal Canadiens",
+        "New York Rangers",
+        "Toronto Maple Leafs"
+      ]
+    },
+    {
+      "category": "Sports",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the name of the AHL affiliate of the Toronto Maple Leafs?",
+      "correct_answer": "Toronto Marlies",
+      "incorrect_answers": [
+        "Toronto Rock",
+        "Toronto Argonauts",
+        "Toronto Wolfpack"
+      ]
+    }
+  ]
+}
