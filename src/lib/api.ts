@@ -26,7 +26,7 @@ export const fetchQuizQuestions = async (
   amount: number,
   difficulty: Difficulty
 ) => {
-  const endpoint = `https://opentdb.com/api.php?amount=${amount}&category=21&difficulty=${difficulty}&type=multiple`;
+  const endpoint = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&type=multiple`;
   //   const data1 = await(await fetch(endpoint)).json()
   const data = await axios.get(endpoint);
   const jsonData: ReponseApi = data.data;
