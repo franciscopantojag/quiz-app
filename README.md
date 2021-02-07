@@ -1,6 +1,6 @@
 # Quiz App
 
-A Quiz App that fetchs questions from [OpenTDB](https://opentdb.com/) API. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Quiz App that fetches questions from [OpenTDB](https://opentdb.com/) API. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
